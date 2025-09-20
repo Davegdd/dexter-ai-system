@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+dxt/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/*.log
+
+# Data directories (with new structure)
+data/records/*
+data/scratch_pads/*
+dexter/memory/sessions/*
+dexter/memory/
+!memory/__init__.py
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints
+
+# Images (except models)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.tiff
+*.svg
+
+# Text files and misc
+*.txt
+*.pem
+*.pdf
+
+# Model files (large files)
+*.onnx
+*.bin
+*.safetensors
+
+# But do NOT ignore specific important files
+!data/audio/tts_models/*.json
+!requirements.txt
+!README.md
+!pyproject.toml
