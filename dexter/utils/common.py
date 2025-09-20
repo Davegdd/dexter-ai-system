@@ -74,12 +74,12 @@ def run_extracted_code(code: str):
         logger.info("Executing extracted code")
         result = custom_executor(code)
         # If result is a Future, return it directly (it's an agent working in background)
-        if isinstance(result[0], Future):
+        if isinstance(result.output, Future):
             logger.info("Code execution returned Future - agent task running in background")
-            return result[0]
+            return result.output
 
         logger.info("Code execution completed successfully")
-        return f"Code execution results: {result}"
+        return f"Code execution results: {result.output}"
     except Exception as e:
         logger.error(f"Error executing code: {str(e)}")
         return f"Code execution results: {str(e)}"
@@ -90,22 +90,26 @@ def generate_tools_prompt(tools_list: list) -> str:
     signatures = []
 
     for tool in tools_list:
+        # Extract argument information - tool.inputs is a dict with type info
         args = ", ".join(
             f"{arg_name}: {arg_info['type'].__name__ if hasattr(arg_info['type'], '__name__') else str(arg_info['type'])}"
             for arg_name, arg_info in tool.inputs.items()
         )
 
+        # Extract argument descriptions
         doc_args = "\n".join(
             f"        {arg_name}: {arg_info['description']}"
             for arg_name, arg_info in tool.inputs.items()
         )
 
+        # Get return type
         return_type = (
             tool.output_type.__name__
             if hasattr(tool.output_type, "__name__")
             else str(tool.output_type)
         )
 
+        # Generate the function signature string
         func_signature = f"""def {tool.name}({args}) -> {return_type}:
     \"\"\"{tool.description}
 
@@ -119,7 +123,7 @@ def generate_tools_prompt(tools_list: list) -> str:
 
 
 def generate_agents_prompt(agent_objects: list) -> str:
-    """Generate the function signatures of all agent objects as a formatted string."""
+    """Get the function signatures of all agent objects as a formatted string."""
     signatures = []
 
     for agent_obj in agent_objects:
