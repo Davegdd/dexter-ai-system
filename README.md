@@ -1,3 +1,5 @@
+## DeXteR AI System
+
 DeXteR is my take on trying to incorporate AI more naturally and with less friction into my life/home. It is a personal system and interface for multimodal interaction with LLMs/LVLM, motivated by the philosophy that such capable technology should not be confined behind a text box and should be as open-source and local as possible. It allows for multimodal interaction and incorporates modes for different degrees of autonomy in the scale of agency (from an LLM with tools to fully fledged Deep Research style agents).
 
 ## Examples of interaction:
