@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/3cffb30a-dbc3-43a6-9fe2-37e905fb8d97
 
 
 
--**Real Time Speech-to-Speech with Vision**: leverages the awesome library RealtimeSTT for VAD and transcription, combined with a custom implementation to allow visual input. If the Vision Mode checkbox is ticked, a frame will be grabbed from a camera for each user turn thus enabling speech-to-speech/text with visual clues.
+- **Real Time Speech-to-Speech with Vision**: leverages the awesome library RealtimeSTT for VAD and transcription, combined with a custom implementation to allow visual input. If the Vision Mode checkbox is ticked, a frame will be grabbed from a camera for each user turn thus enabling speech-to-speech/text with visual clues.
 
 
 https://github.com/user-attachments/assets/8d42e1ef-5a6a-4078-873d-743274978dc7
@@ -33,20 +33,20 @@ Agents can be manually launched from the corresponding component of the UI or by
 
 I have implemented three for my most common use cases: 
 
--**Auchan Agent**: for interacting with Auchan's website for grocery shopping (uses vision and text for web browsing). Capable of searching for products and putting them in the cart. In the following example it can be seen browsing the website for requested products and recovering from errors and annoying pop-ups and banners, as well as realizing that it should search for the products in Spanish despite the task being in English.
+- **Auchan Agent**: for interacting with Auchan's website for grocery shopping (uses vision and text for web browsing). Capable of searching for products and putting them in the cart. In the following example it can be seen browsing the website for requested products and recovering from errors and annoying pop-ups and banners, as well as realizing that it should search for the products in Spanish despite the task being in English.
 
 
 https://github.com/user-attachments/assets/3b4814eb-b1c5-4a55-829f-cf1daf19bca0
 
 
 
--**Report Agent**: for generating reports and documents from web search data on arbitrary topics. In this example the model is tasked with finding information on recent incidents involving planes in Europe and creating an interactive map.
+- **Report Agent**: for generating reports and documents from web search data on arbitrary topics. In this example the model is tasked with finding information on recent incidents involving planes in Europe and creating an interactive map.
 
 
 https://github.com/user-attachments/assets/3163b762-556d-4a1a-b466-a03f61ac7b83
 
 
--**YouTube Agent**: for interacting with YouTube videos, including searching, watching, and extracting transcripts. It allows to quickly locate media of interest, saving a lot of time of manual searches.
+- **YouTube Agent**: for interacting with YouTube videos, including searching, watching, and extracting transcripts. It allows to quickly locate media of interest, saving a lot of time of manual searches.
 
 
 ## Context & Memory:
