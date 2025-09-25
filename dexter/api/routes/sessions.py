@@ -24,11 +24,11 @@ class LoadSessionResponse(BaseModel):
     status: str = "success"
     message: str
 
-@router.get("/tag", response_model=SessionTagResponse)
+@router.get("/session-tag", response_model=SessionTagResponse)
 async def get_session_tag():
     return SessionTagResponse(session_tag=llm.session_tag)
 
-@router.post("/tag", response_model=SessionTagResponse)
+@router.post("/session-tag", response_model=SessionTagResponse)
 async def set_session_tag(request: SessionTagRequest):
     llm.session_tag = request.session_tag
     return SessionTagResponse(session_tag=llm.session_tag)

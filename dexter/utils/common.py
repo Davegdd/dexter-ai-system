@@ -49,7 +49,7 @@ def format_content(text: str, image: str | None = None) -> list[dict[str, str]]:
 
 
 def extract_code_from_text(
-    text: str, code_block_tags: tuple[str, str] = ("```(?:python|py|tool_code)", "```")
+    text: str, code_block_tags: tuple[str, str] = ("```(?:python|py|tool_code|tool_call)", "```")
 ) -> str | None:
     """Extract code from the LLM's output."""
     pattern = rf"{code_block_tags[0]}(.*?){code_block_tags[1]}"

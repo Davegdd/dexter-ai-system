@@ -9,7 +9,7 @@ def context_memory_component():
     st.subheader("Session Tagging")
     
     try:
-        response = requests.get(f"{API_BASE_URL}/session-tag")
+        response = requests.get(f"{API_BASE_URL}/sessions/session-tag")
         current_session = response.json().get("session_tag") if response.status_code == 200 else None
     except requests.exceptions.RequestException:
         current_session = None
@@ -40,7 +40,7 @@ def context_memory_component():
         if st.button("Set Session Tag", type="primary"):
             try:
                 tag_to_set = new_session_tag.strip() if new_session_tag.strip() else None
-                response = requests.post(f"{API_BASE_URL}/session-tag", json={"session_tag": tag_to_set})
+                response = requests.post(f"{API_BASE_URL}/sessions/session-tag", json={"session_tag": tag_to_set})
                 if response.status_code == 200:
                     if tag_to_set:
                         st.success(f"✅ Session set to: {tag_to_set}")
@@ -54,7 +54,7 @@ def context_memory_component():
         
         if st.button("Clear Session", type="secondary"):
             try:
-                response = requests.post(f"{API_BASE_URL}/session-tag", json={"session_tag": None})
+                response = requests.post(f"{API_BASE_URL}/sessions/session-tag", json={"session_tag": None})
                 if response.status_code == 200:
                     st.success("✅ Session cleared")
                     st.rerun()
