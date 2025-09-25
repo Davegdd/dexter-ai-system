@@ -26,6 +26,25 @@
 
 ---
 
+## Index  
+
+- [Overview](#overview)  
+- [Features](#features)  
+- [Examples of Interaction](#examples-of-interaction)  
+- [Agents](#agents)  
+  - [Implemented Agents](#implemented-agents)  
+- [Context & Memory](#context--memory)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+  - [Start the Server](#start-the-server)  
+  - [Run the Web Interface](#run-the-web-interface)  
+- [License](#license)  
+- [Developer Notes](#developer-notes)  
+  - [Full Project Structure](#full-project-structure)  
+  - [Details for Internals](#details-for-anyone-diving-into-the-internals)  
+
+---
+
 ## Overview
 
 DeXteR is my attempt to integrate AI into my daily life and home in a more natural, frictionless way.  
