@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-app-FF4B4B.svg)](https://streamlit.io/)
-[![HuggingFace](https://img.shields.io/badge/Agents-Smolagents-yellow)](https://huggingface.co/docs/smolagents/index)
+[![HuggingFace](https://img.shields.io/badge/Agents-Smolagents-yellow)](https://huggingface.co/docs/smolagents/index) 
 
 > ⚠️ **Note**  
 > This project was developed and tested on **macOS** (MacBook Pro M3 Pro 18GB). It is not intended as a ready-to-run solution but rather as a personal experiment that I’m sharing so others can **reuse ideas, code, and inspiration**. Expect to adapt it to your own environment.
